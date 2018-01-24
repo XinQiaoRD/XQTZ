@@ -10,6 +10,23 @@ Room.Loader.ppt = ()=>{
 // Index
 Room.Index = {};
 Room.Index.dom = ()=>{
+
+    $$("#HBoxMenu .bot").click(()=>{
+        Dom.HammerHBox.top();
+    });
+
+    // $("#HBoxMenu .box").click(function(){
+    //     let mid = $(this).data("mid");
+    //     Dom.HammerHBox.go(mid);
+    // })
+    //
+    // $$("#HBoxMenu .box").click(()=>{
+    //     let mid = $(this).data("mid");
+    //     alert(mid);
+    //     //Dom.HammerHBox.go(mid);
+    // })
+
+
     // $$("#Index").click(()=>{
     //     Room.Index.ppt();
     // });

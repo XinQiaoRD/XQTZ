@@ -2,6 +2,43 @@
 
 
 /*Index*/
+#Index{}
+#HBox{
+    position: absolute;
+    width: 1600px; height: 940px;
+    left: 160px; top: 140px;
+}
+#HBox .box{
+    position: relative;
+    width: 1600px; height: 800px;
+    left: 0px; top: 0px;
+    margin-bottom: 80px;
+    background: url("../img/hbox.png") no-repeat;
+}
+#HBoxMenu{
+    position: absolute;
+    width: 100px;
+    left: 1760px; top: 240px;
+    overflow: hidden;
+}
+#HBoxMenu .tit{
+    width: 100px; height: 50px;
+    background: url("../img/menu_tit.png") no-repeat;
+}
+#HBoxMenu .box{
+    width: 100px; height: 40px;
+    background: url("../img/menu_box.png") no-repeat;
+    font-size: 18px; color: #fff;
+    text-align: center; line-height: 40px;
+}
+#HBoxMenu .box.act{
+    width: 100px; height: 40px;
+    background: url("../img/menu_act.png") no-repeat;
+}
+#HBoxMenu .bot{
+    width: 100px; height: 40px;
+    background: url("../img/menu_bot.png") no-repeat;
+}
 
 /*Video*/
 #Video video{}

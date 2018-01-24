@@ -22,38 +22,42 @@
         <img style="position: absolute; width: 493px; height: 60px; left: 715px; top:50px;" src="img/tit.png" alt="">
 
         <div id="HBox">
-            <div class="box box2017">
-                <div class="tit">2017年</div>
+            <!--<div class="box box2017">-->
+                <!--&lt;!&ndash;<div class="tit">2017年</div>&ndash;&gt;-->
 
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/1.png" alt=""></div>-->
-                        <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/2.png" alt=""></div>-->
-                        <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/3.png" alt=""></div>-->
-                        <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/4.png" alt=""></div>-->
-                        <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/5.png" alt=""></div>-->
-                        <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/6.png" alt=""></div>-->
-                        <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/7.png" alt=""></div>-->
-                        <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/8.png" alt=""></div>-->
-                        <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/9.png" alt=""></div>-->
-                        <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/10.png" alt=""></div>-->
-                        <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/11.png" alt=""></div>-->
-                        <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/12.png" alt=""></div>-->
-                    </div>
-                </div>
+                <!--&lt;!&ndash;<div class="swiper-container">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="swiper-wrapper">&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/1.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/2.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/3.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/4.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/5.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/6.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/7.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/8.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/9.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/10.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/11.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/12.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
 
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <!--&lt;!&ndash;<div class="swiper-button-next"></div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="swiper-button-prev"></div>&ndash;&gt;-->
 
 
-            </div>
-            <div class="box2016"></div>
-            <div class="box2015"></div>
-            <div class="box2014"></div>
-            <div class="box2013"></div>
+            <!--</div>-->
+            <!--<div class="box2016"></div>-->
+            <!--<div class="box2015"></div>-->
+            <!--<div class="box2014"></div>-->
+            <!--<div class="box2013"></div>-->
         </div>
         <div id="HBoxMenu">
-
+            <div class="tit"></div>
+            <div class="box act">2018</div>
+            <div class="box">2017</div>
+            <div class="box">2016</div>
+            <div class="bot"></div>
         </div>
 
     </section>
@@ -87,7 +91,11 @@
     </section>
 
 
+    <script type="text/template" id="View_HBox">
+        <div class="box box{$year}">
 
+        </div>
+    </script>
 
 
 </div>
@@ -105,6 +113,9 @@
 
 <script src="lib/zh.js"></script>
 
+<script>window.Hammer = require('hammerjs');</script>
+<script src="lib/hammer/hammer_year.js"></script>
+
 <!--主程序-->
 <script src="../../assets/config.js"></script>
 <script src="js/init.js"></script>
@@ -117,7 +128,7 @@
 <script src="js/index.js"></script>
 
 <script>
-    $(window).load(()=>zh.loader());
+    $(window).load(()=>init.loader());
     document.getElementById("CC").addEventListener('touchmove', function(event){
         event.preventDefault();
         event.stopPropagation();
