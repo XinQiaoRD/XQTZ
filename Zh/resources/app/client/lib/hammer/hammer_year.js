@@ -18,7 +18,8 @@ function HammerYear(id, mid, h, p) {
     this._this.h = h;
     this._this.p = p-1;
 
-    this.hammer.add(new Hammer.Swipe());
+    this.hammer.add(new Hammer.Swipe({ direction: Hammer.DIRECTION_ALL, threshold: 10 }));
+    //this.hammer.add(new Hammer.Pan({ direction: Hammer.DIRECTION_ALL, threshold: 10 }));
     this.hammer.on("swipeup", Hammer.bindFn(this.onSwipeUp, this._this));
     this.hammer.on("swipedown", Hammer.bindFn(this.onSwipeDown, this._this));
 

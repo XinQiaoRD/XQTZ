@@ -1,0 +1,114 @@
+﻿@charset "utf-8";
+@font-face{ font-family:'myFont'; src: url('../../../assets/font/RTWSShangYaDemo-Regular.otf'); }
+
+/*Index*/
+#Index{}
+#bgv{
+    position: absolute;
+    top: 0px; left: 0px;
+    z-index: 91; opacity: 0.15;
+}
+#Index .logo{
+    position: absolute; width: 493px; height: 60px;
+    left: 715px; top:50px;
+    z-index: 999
+}
+#Index .Head{
+    position: absolute;
+    width: 1600px; height: 160px;
+    left: 160px; top: 0px;
+    z-index: 90;
+    background-color: #f0e7e1
+}
+#HBox{
+    position: absolute;
+    width: 1600px; height: 800px; overflow: inherit !important;
+    left: 160px; top: 140px;
+}
+#HBox .box{
+    position: relative;
+    width: 1600px; height: 800px;
+    left: 0px; top: 0px;
+    /*margin-bottom: -80px;*/
+    background: url("../../../assets/img/hbox.png") no-repeat;
+}
+#HBox .box .tit{
+    position: absolute;
+    width: 250px; height: 60px;
+    left: 677px; top: 71px;
+    font-size: 50px; color: #6f573e;
+    line-height: 60px; text-align: center;
+    font-family:"myFont";
+}
+#HBox .box .tit span{
+    font-size: 54px;
+    font-family:"myFont";
+}
+#HBoxMenu{
+    position: absolute;
+    width: 100px;
+    left: 1760px; top: 240px;
+    overflow: hidden;
+}
+#HBoxMenu .tit{
+    width: 100px; height: 50px;
+    background: url("../../../assets/img/menu_tit.png") no-repeat;
+}
+#HBoxMenu .box{
+    width: 100px; height: 40px;
+    background: url("../../../assets/img/menu_box.png") no-repeat;
+    font-size: 18px; color: #fff;
+    text-align: center; line-height: 40px;
+}
+#HBoxMenu .box.act{
+    width: 100px; height: 40px;
+    background: url("../../../assets/img/menu_act.png") no-repeat;
+}
+#HBoxMenu .bot{
+    width: 100px; height: 40px;
+    background: url("../../../assets/img/menu_bot.png") no-repeat;
+}
+#Index .DBList{
+    position: absolute;
+    width: 1405px; height: 475px;
+    left: 100px; top: 215px;
+}
+#Index .DBList .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    width:665px; height: 200px;
+    background: url("../../../assets/img/box.png") no-repeat;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+#Index .swiper-pagination-box{
+    position: relative;
+    top: 740px;
+    width: 1600px; text-align: center;
+}
+#Index .swiper-pagination-box .swiper-pagination-bullet{
+    background-color: #6f573e!important; width: 8px!important; height: 8px!important;
+    border-radius:0px !important; margin-right: 10px!important;
+}
+#Index ._yearBox .pre{
+    position: absolute;
+    top: 81px; left: 1417px;
+    width: 40px; height: 40px;
+}
+#Index ._yearBox .next{
+    position: absolute;
+    top: 81px; left: 1460px;
+    width: 40px; height: 40px;
+}

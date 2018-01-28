@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>互动多媒体系统</title>
 
+    <link rel="stylesheet" href="css/inc.css">
+    <link rel="stylesheet" href="css/index.css">
+
 </head>
 
 <body ondragstart="return false" onselect="return false" onselectstart="return false" oncontextmenu="return false">
@@ -19,39 +22,17 @@
     </section>
 
     <section class="cc" id="Index">
-        <img style="position: absolute; width: 493px; height: 60px; left: 715px; top:50px;" src="img/tit.png" alt="">
 
-        <div id="HBox">
-            <!--<div class="box box2017">-->
-                <!--&lt;!&ndash;<div class="tit">2017年</div>&ndash;&gt;-->
+        <img class="logo" src="img/tit.png" alt="">
 
-                <!--&lt;!&ndash;<div class="swiper-container">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="swiper-wrapper">&ndash;&gt;-->
-                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/1.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
-                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/2.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
-                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/3.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
-                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/4.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
-                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/5.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
-                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/6.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
-                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/7.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
-                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/8.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
-                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/9.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
-                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/10.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
-                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/11.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
-                        <!--&lt;!&ndash;&lt;!&ndash;<div class="swiper-slide"><img src="../../../../assets/img/page1/12.png" alt=""></div>&ndash;&gt;&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-                <!--&lt;!&ndash;<div class="swiper-button-next"></div>&ndash;&gt;-->
-                <!--&lt;!&ndash;<div class="swiper-button-prev"></div>&ndash;&gt;-->
-
-
-            <!--</div>-->
-            <!--<div class="box2016"></div>-->
-            <!--<div class="box2015"></div>-->
-            <!--<div class="box2014"></div>-->
-            <!--<div class="box2013"></div>-->
+        <div class="Head"></div>
+        <div id="HBox" class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+            </div>
         </div>
+
         <div id="HBoxMenu">
             <div class="tit"></div>
             <div class="box act">2018</div>
@@ -60,43 +41,35 @@
             <div class="bot"></div>
         </div>
 
+        <!--<video id="bgv" src="../../assets/video/bg6.mp4" height="1080" autoplay="autoplay" loop="loop"></video>-->
     </section>
-
-
-    <section class="cc Page" id="Page1">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/1.png" alt=""></div>-->
-                <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/2.png" alt=""></div>-->
-                <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/3.png" alt=""></div>-->
-                <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/4.png" alt=""></div>-->
-                <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/5.png" alt=""></div>-->
-                <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/6.png" alt=""></div>-->
-                <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/7.png" alt=""></div>-->
-                <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/8.png" alt=""></div>-->
-                <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/9.png" alt=""></div>-->
-                <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/10.png" alt=""></div>-->
-                <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/11.png" alt=""></div>-->
-                <!--<div class="swiper-slide"><img src="../../../../assets/img/page1/12.png" alt=""></div>-->
-            </div>
-        </div>
-        <div class="nav">
-            <div class="nav_i1"></div>
-            <div class="nav_i2"></div>
-            <div class="nav_i3"></div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="home"></div>
-    </section>
-
 
     <script type="text/template" id="View_HBox">
-        <div class="box box{$year}">
+        <div class="swiper-slide box box{$year} _yearBox">
+            <div class="tit"><span>{$year}</span>年</div>
 
+            <div class="DBList{$year} DBList swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                </div>
+                <!-- Add Pagination -->
+            </div>
+            <div class="swiper-pagination-box swiper-pagination-box{$year}"></div>
+
+            <div class="pre" data-id="{$id}"></div>
+            <div class="next" data-id="{$id}"></div>
         </div>
-    </script>
 
+    </script>
 
 </div>
 
@@ -106,25 +79,18 @@
 <script>window.$ = window.jQuery = require('jquery');</script>
 <script src="lib/underscore.js"></script>
 <script src="lib/velocity/velocity.js"></script>
-<!--<script src="lib/websocket/ws.js"></script>-->
 
-<link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
-<script src="lib/swiper/js/swiper.js"></script>
+<link rel="stylesheet" href="lib/swiper4/dist/css/swiper.css">
+<script src="lib/swiper4/dist/js/swiper.js"></script>
 
 <script src="lib/zh.js"></script>
-
-<script>window.Hammer = require('hammerjs');</script>
-<script src="lib/hammer/hammer_year.js"></script>
-
 <!--主程序-->
 <script src="../../assets/config.js"></script>
 <script src="js/init.js"></script>
 <script src="js/server.js"></script>
 <!--<script src="js/mp3.js"></script>-->
-<link rel="stylesheet" href="../../assets/css/inc.css">
 
 <!--模块程序-->
-<link rel="stylesheet" href="../../assets/css/index.css">
 <script src="js/index.js"></script>
 
 <script>

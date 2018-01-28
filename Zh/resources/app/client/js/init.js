@@ -2,16 +2,7 @@ var init = {};
 
 init.loader = ()=>{
     Dom._unable = $("#_unable");
-
     zh.server(init.view);
-
-    // for(var i=1; i<=7; i++){
-    //     Dis.view(i);
-    // }
-    //
-    // zh.ini();
-    // zh.do();
-    // setTimeout(Room.Loader.ppt , 500);
 };
 
 init.view = ()=>{
@@ -35,54 +26,59 @@ init.index = ()=>{
     for(let i in year){
 
         let y = year[i];
-        let json = {year:y};
+        let json = {id:i, year:y};
         HBox_html+= View_HBox(json);
 
-        HBoxMenu_html+= '<div class="box HammerYearMenu HammerYearMenuId'+i+'">'+y+'</div>';
+        HBoxMenu_html+= '<div class="box YearMenu YearMenuId'+i+'" data-id="'+i+'" >'+y+'</div>';
     }
 
-    $("#HBox").html(HBox_html);
+    $("#HBox .swiper-wrapper").html(HBox_html);
     $("#HBoxMenu").html('<div class="tit"></div>'+HBoxMenu_html+'<div class="bot"></div>');
-
-    $(".HammerYearMenuId0").addClass("act");
-
-    for(let i in year){
-        $$(".HammerYearMenuId"+i).click(()=>{
-            Dom.HammerHBox.go(i);
-        })
-    }
+    $(".YearMenuId0").addClass("act");
 
     setTimeout(function(){
-        Dom.HammerHBox = new HammerYear("#HBox","#HBoxMenu", 880, year.length);
+        init.swiper(year);
     },200);
 
-    //
 
 
-    // var html_m = "",
-    //     html_menu = "",
-    //     html_case = "";
-    //
-    // for(var i in page){
-    //
-    //     var p1 = page[i];
-    //     p1.id = id;
-    //     p1.i = parseInt(i)+1;
-    //     html_case = "";
-    //     for(var c in p1.case){
-    //         html_case+= '<li><img src="../../uploads/page1/'+p1.case[c]+'"></li>';
-    //     }
-    //     p1.caseLi = html_case;
-    //
-    //     html_m += View_page1_m(p1);
-    //     html_menu += View_page1_menu(p1);
-    //
-    // }
+};
 
-    // var json = {m:html_m};
-    // var html = View_page1(json);
-    // $("#CC").append(html);
+init.swiper = (year)=>{
+    Dom.swiper = {};
+    cc.m["Index"].show();
+    Dom.swiper.HBox = new Swiper('#HBox', {
+        direction: 'vertical',
+        spaceBetween: 80,
+        longSwipesRatio:0.3,
+        on:{
+            slideChangeTransitionEnd: function(){
 
+                let ids = this.activeIndex;
+                $(".YearMenu").removeClass("act");
+                $(".YearMenuId"+ids).addClass("act");
+                Dom.swiper.DBList[ids].slideTo(0, 0, false);
+
+            }
+        },
+    });
+
+    Dom.swiper.DBList = [];
+    for(let i in year){
+        Dom.swiper.DBList[i] = new Swiper('.DBList'+year[i], {
+            slidesPerView: 2,
+            slidesPerColumn: 2,
+            longSwipesRatio:0.3,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination-box'+year[i],
+                clickable: true,
+            },
+        });
+    }
+
+
+    cc.m["Index"].hide();
 
 };
 
