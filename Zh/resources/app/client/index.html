@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/inc.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/word.css">
 
 </head>
 
@@ -44,6 +45,36 @@
         <!--<video id="bgv" src="../../assets/video/bg6.mp4" height="1080" autoplay="autoplay" loop="loop"></video>-->
     </section>
 
+    <script type="text/template" id="View_Word">
+        <section class="cc Word" id="Word{$id}">
+            <div class="box">
+                <div class="title">{$nm}：{$title}</div>
+                <div class="left">
+                    <div class="act act1"></div>
+                    <div class="act act2"></div>
+                    <div class="act act3"></div>
+                    <div class="left_bg"></div>
+
+                    <img src="../../uploads/person/{$photo}" alt="" class="photo">
+                </div>
+                <div class="main content">
+                    <div class="tit">李秀红代表：</div>
+                    <div class="m_info">{$word_info}</div>
+                </div>
+                <!--<div class="main back">-->
+                <!--<div class="tit">关于对区九届人大一次会议第26号代表建议的答复函</div>-->
+                <!--<div class="m_info">李秀红代表：</div>-->
+                <!--</div>-->
+                <!--<div class="main news">-->
+                <!--<div class="tit">关于对区九届人大一次会议第26号代表建议的答复函</div>-->
+                <!--<div class="m_info">李秀红代表：</div>-->
+                <!--</div>-->
+                <div class="cls"></div>
+            </div>
+        </section>
+    </script>
+
+
     <script type="text/template" id="View_HBox">
         <div class="swiper-slide box box{$year} _yearBox">
             <div class="tit"><span>{$year}</span>年</div>
@@ -71,6 +102,15 @@
 
     </script>
 
+    <script type="text/template" id="View_boxs">
+        <div class="swiper-slide _boxs">
+            <img class="boxs_photo" src="../../uploads/person/20180124114214198.jpg" alt="">
+            <div class="boxs_tit">李秀红：关于解决温州科技职业学院引进人才子女入托入学问题的再建议</div>
+            <div class="boxs_desc">如何使他们安心于当前的工作和生活，充分发挥各自的才华，解决他们的后顾之忧，是我们人大代表不得不考虑的问题。</div>
+            <div class="pot1"></div>
+        </div>
+    </script>
+
 </div>
 
 </body>
@@ -92,6 +132,7 @@
 
 <!--模块程序-->
 <script src="js/index.js"></script>
+<script src="js/word.js"></script>
 
 <script>
     $(window).load(()=>init.loader());

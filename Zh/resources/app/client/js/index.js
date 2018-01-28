@@ -43,14 +43,18 @@ Room.Index.dom = ()=>{
         Dom.swiper.DBList[id].slideNext();
     });
 
+    $$("#Index ._boxs .boxs_photo").click(function(){
+        Room.Index.ppt();
+    });
+
 };
 
 Room.Index.ppt = ()=>{
     Dom._unable.show();
-    cc.ppt([cc.id, "Video"] , (after)=>{
-        cc.m[cc.old].velocity({ opacity: 0 }, { duration: 1000, display:"none"});
-        cc.m["Video"].show().velocity({ opacity: [1,0] }, 1000, ()=>{
-            after.come();
+    cc.ppt([cc.id, "Word3"] , (after)=>{
+        //cc.m[cc.old].velocity({ opacity: 0 }, { duration: 500, display:"none"});
+        cc.m["Word3"].show().velocity({ opacity: [1,0] }, 500, ()=>{
+            //after.come();
             Dom._unable.hide();
         });
     });

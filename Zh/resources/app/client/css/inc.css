@@ -12,6 +12,11 @@ h1,h2,h3,em,b{font-style:normal;}
 table{border-collapse:collapse;border-spacing:0;}
 .clear{ width:0; height:0;clear:both;font-size:0;line-height:0}
 .top1{ height:1px; overflow: hidden}
+._flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 body{
     transform:scale(1) !important; transform-origin: top left; background-color: #000;
 }

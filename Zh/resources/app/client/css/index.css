@@ -112,3 +112,36 @@
     top: 81px; left: 1460px;
     width: 40px; height: 40px;
 }
+
+#Index ._boxs .boxs_photo{
+    position: absolute;
+    left: 4px; top: 4px;
+    width: 192px; height: 192px;
+}
+#Index ._boxs .boxs_tit{
+    position: absolute;
+    left: 229px; top: 0px;
+    width: 436px; height: 106px;
+    font-size: 24px; color: #dc5750;
+    text-align: left;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#Index ._boxs .boxs_desc{
+    position: absolute;
+    left: 229px; top: 116px;
+    width: 436px; height: 86px;
+    font-size: 16px; color: #666;
+    text-align: left;
+    overflow: hidden;
+}
+#Index ._boxs .pot1{
+    position: absolute;
+    left: 170px; top: 170px;
+    width: 20px; height: 20px;
+    background: url("../../../assets/img/pot1.png") no-repeat;
+}
