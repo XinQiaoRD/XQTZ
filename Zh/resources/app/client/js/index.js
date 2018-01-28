@@ -51,11 +51,11 @@ Room.Index.dom = ()=>{
 
 Room.Index.ppt = ()=>{
     Dom._unable.show();
-    cc.ppt([cc.id, "Word3"] , (after)=>{
+    cc.ppt([cc.id, "Word3", "", "Word"] , (after)=>{
         //cc.m[cc.old].velocity({ opacity: 0 }, { duration: 500, display:"none"});
-        cc.m["Word3"].show().velocity({ opacity: [1,0] }, 500, ()=>{
+        cc.m["Word3"].show().velocity({ opacity: [1,0] }, 100, ()=>{
             //after.come();
-            Dom._unable.hide();
+            after.come();
         });
     });
 

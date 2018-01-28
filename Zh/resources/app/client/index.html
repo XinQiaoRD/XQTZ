@@ -7,9 +7,10 @@
     <title>互动多媒体系统</title>
 
     <link rel="stylesheet" href="css/inc.css">
+    <link rel="stylesheet" href="lib/swiper/dist/css/swiper.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/word.css">
-
+    
 </head>
 
 <body ondragstart="return false" onselect="return false" onselectstart="return false" oncontextmenu="return false">
@@ -56,20 +57,52 @@
                     <div class="left_bg"></div>
 
                     <img src="../../uploads/person/{$photo}" alt="" class="photo">
+
+                    <div class="btn btn1" data-id="{$id}"></div>
+                    <div class="btn btn2" data-id="{$id}"></div>
+                    <div class="btn btn3" data-id="{$id}"></div>
                 </div>
+
                 <div class="main content">
-                    <div class="tit">李秀红代表：</div>
-                    <div class="m_info">{$word_info}</div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="tit">李秀红代表：</div>
+                                <div class="m_info">{$word_info}</div>
+                            </div>
+                        </div>
+                        <!-- Add Scroll Bar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
                 </div>
-                <!--<div class="main back">-->
-                <!--<div class="tit">关于对区九届人大一次会议第26号代表建议的答复函</div>-->
-                <!--<div class="m_info">李秀红代表：</div>-->
-                <!--</div>-->
-                <!--<div class="main news">-->
-                <!--<div class="tit">关于对区九届人大一次会议第26号代表建议的答复函</div>-->
-                <!--<div class="m_info">李秀红代表：</div>-->
-                <!--</div>-->
-                <div class="cls"></div>
+
+                <div class="main back">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="tit">{$back_tit}</div>
+                                <div class="m_info">{$back_info}</div>
+                            </div>
+                        </div>
+                        <!-- Add Scroll Bar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+
+                <div class="main news">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="tit">{$news_tit}</div>
+                                <div class="m_info">{$news_info}</div>
+                            </div>
+                        </div>
+                        <!-- Add Scroll Bar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+
+                <div class="cls" data-id="{$id}"></div>
             </div>
         </section>
     </script>
@@ -120,8 +153,7 @@
 <script src="lib/underscore.js"></script>
 <script src="lib/velocity/velocity.js"></script>
 
-<link rel="stylesheet" href="lib/swiper4/dist/css/swiper.css">
-<script src="lib/swiper4/dist/js/swiper.js"></script>
+<script src="lib/swiper/dist/js/swiper.js"></script>
 
 <script src="lib/zh.js"></script>
 <!--主程序-->

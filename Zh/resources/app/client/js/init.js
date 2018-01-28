@@ -74,6 +74,49 @@ init.word = ()=>{
         $CC.append(Word_cc);
     }
 
+    setTimeout(()=>{
+        $(".Word").show();
+
+        Dom.Word_content = {};
+        Dom.Word_back = {};
+        Dom.Word_news = {};
+        for(let i in word){
+            Dom.Word_content["Word"+i] = new Swiper('#Word'+i+' .content .swiper-container', {
+                direction: 'vertical',
+                slidesPerView: 'auto',
+                freeMode: true,
+                scrollbar: {
+                    el: '#Word'+i+' .content .swiper-scrollbar',
+                },
+                mousewheel: true,
+            });
+
+            Dom.Word_back["Word"+i] = new Swiper('#Word'+i+' .back .swiper-container', {
+                direction: 'vertical',
+                slidesPerView: 'auto',
+                freeMode: true,
+                scrollbar: {
+                    el: '#Word'+i+' .back .swiper-scrollbar',
+                },
+                mousewheel: true,
+            });
+
+            Dom.Word_news["Word"+i] = new Swiper('#Word'+i+' .news .swiper-container', {
+                direction: 'vertical',
+                slidesPerView: 'auto',
+                freeMode: true,
+                scrollbar: {
+                    el: '#Word'+i+' .news .swiper-scrollbar',
+                },
+                mousewheel: true,
+            });
+        }
+
+        $(".Word").hide();
+    },200);
+
+
+
 };
 
 init.swiper = (year)=>{

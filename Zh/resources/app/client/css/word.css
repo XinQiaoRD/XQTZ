@@ -46,6 +46,15 @@
 .Word .box .left .act2{ top: 336px}
 .Word .box .left .act3{ top: 422px}
 
+.Word .box .left .btn{
+    position: absolute;
+    width: 200px; height: 55px;
+    left: 0px;
+}
+.Word .box .left .btn1{ top: 251px}
+.Word .box .left .btn2{ top: 336px}
+.Word .box .left .btn3{ top: 422px}
+
 .Word .cls{
     position: absolute;
     right: 30px; top: 32px;
@@ -74,4 +83,15 @@
     width: 100%;
     line-height: 42px;
     text-align: left;
+}
+
+.Word .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.Word .swiper-slide {
+    height: auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-right: 50px;
 }
