@@ -9,9 +9,10 @@ Download.down = function(){
 
     var serv = zh.conf.server+"/uploads/person/";
     var local = Url.fs+"uploads/person/";
-    
-    for(var i in Base.word){
-        var rs = Base.word[i];
+
+    for(var i in Base.person){
+        var p = Base.person[i];
+        var rs = p.person;
         if(rs.photo) Server.save(serv , local, rs.photo, rs.photo_size);
     }
 
