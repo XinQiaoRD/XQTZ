@@ -31,7 +31,7 @@ init.view = ()=>{
 
         HBoxMenu_html+= '<div class="box YearMenu YearMenuId'+i+'" data-id="'+i+'" >'+y+'</div>';
 
-        let boxs_html = init.box(View_boxs);
+        let boxs_html = init.box(View_boxs, y);
         $("#Index .DBList"+y+" .swiper-wrapper").html(boxs_html);
     }
 
@@ -53,12 +53,17 @@ init.view = ()=>{
 };
 
 //处理每年的提案
-init.box = (_view)=>{
+init.box = (_view, y)=>{
     let html="";
+    let year = Base.year_word[y];
     let json = {};
-    for(let i=1; i<=8; i++){
-        html+= _view(json)
+    for(let i in year){
+        let id = year[i];
+        json = Base.word[id];
+        console.log(json);
+        html+= _view(json);
     }
+
     return html;
 };
 

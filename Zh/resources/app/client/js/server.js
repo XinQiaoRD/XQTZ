@@ -13,6 +13,7 @@ Download.down = function(){
     for(var i in Base.person){
         var p = Base.person[i];
         var rs = p.person;
+        if(rs.head) Server.save(serv , local, rs.head, rs.head_size);
         if(rs.photo) Server.save(serv , local, rs.photo, rs.photo_size);
     }
 

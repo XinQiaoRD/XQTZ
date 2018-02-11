@@ -71,7 +71,7 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="tit">李秀红代表：</div>
+                                <div class="tit">{$nm}代表：</div>
                                 <div class="m_info">{$word_info}</div>
                             </div>
                         </div>
@@ -141,11 +141,11 @@
 
     <script type="text/template" id="View_boxs">
         <div class="swiper-slide _boxs">
-            <div class="boxs_photo">
-                <img width="192" src="../../uploads/person/20180124114214198.jpg" alt="">
+            <div class="boxs_photo" data-id="{$id}">
+                <img width="192" src="../../uploads/person/{$photo}" alt="">
             </div>
-            <div class="boxs_tit">李秀红：关于解决温州科技职业学院引进人才子女入托入学问题的再建议</div>
-            <div class="boxs_desc">如何使他们安心于当前的工作和生活，充分发挥各自的才华，解决他们的后顾之忧，是我们人大代表不得不考虑的问题。</div>
+            <div class="boxs_tit">{$nm}：{$title}</div>
+            <div class="boxs_desc">{$desc_info}</div>
             <div class="pot1"></div>
         </div>
     </script>

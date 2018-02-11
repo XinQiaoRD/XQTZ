@@ -44,16 +44,17 @@ Room.Index.dom = ()=>{
     });
 
     $$("#Index ._boxs .boxs_photo").click(function(){
-        Room.Index.ppt();
+        let id = $(this).data("id");
+        Room.Index.ppt(id);
     });
 
 };
 
-Room.Index.ppt = ()=>{
+Room.Index.ppt = (id)=>{
     Dom._unable.show();
-    cc.ppt([cc.id, "Word3", "", "Word"] , (after)=>{
+    cc.ppt([cc.id, "Word"+id, "", "Word"] , (after)=>{
         //cc.m[cc.old].velocity({ opacity: 0 }, { duration: 500, display:"none"});
-        cc.m["Word3"].show().velocity({ opacity: [1,0] }, 100, ()=>{
+        cc.m["Word"+id].show().velocity({ opacity: [1,0] }, 100, ()=>{
             //after.come();
             after.come();
         });
