@@ -1,24 +1,18 @@
 ﻿@charset "utf-8";
-@font-face{ font-family:'myFont'; src: url('../../../assets/font/RTWSShangYaDemo-Regular.otf'); }
 
 /*Index*/
-#Index{}
+#Page1{
+    background-color: inherit;
+}
 #bgv{
     position: absolute;
     top: 0px; left: 0px;
     z-index: 91; opacity: 0.15;
 }
-#Index .logo{
-    position: absolute; width: 493px; height: 60px;
+#Page1 .tit{
+    position: absolute;
     left: 715px; top:50px;
     z-index: 999
-}
-#Index .Head{
-    position: absolute;
-    width: 1600px; height: 160px;
-    left: 160px; top: 0px;
-    z-index: 90;
-    background-color: #f0e7e1
 }
 #HBox{
     position: absolute;
@@ -68,12 +62,12 @@
     width: 100px; height: 40px;
     background: url("../../../assets/img/menu_bot.png") no-repeat;
 }
-#Index .DBList{
+#Page1 .DBList{
     position: absolute;
     width: 1405px; height: 475px;
     left: 100px; top: 215px;
 }
-#Index .DBList .swiper-slide {
+#Page1 .DBList .swiper-slide {
     text-align: center;
     font-size: 18px;
     width:665px; height: 200px;
@@ -93,33 +87,33 @@
     -webkit-align-items: center;
     align-items: center;
 }
-#Index .swiper-pagination-box{
+#Page1 .swiper-pagination-box{
     position: relative;
     top: 740px;
     width: 1600px; text-align: center;
 }
-#Index .swiper-pagination-box .swiper-pagination-bullet{
+#Page1 .swiper-pagination-box .swiper-pagination-bullet{
     background-color: #6f573e!important; width: 8px!important; height: 8px!important;
     border-radius:0px !important; margin-right: 10px!important;
 }
-#Index ._yearBox .pre{
+#Page1 ._yearBox .pre{
     position: absolute;
     top: 81px; left: 1417px;
     width: 40px; height: 40px;
 }
-#Index ._yearBox .next{
+#Page1 ._yearBox .next{
     position: absolute;
     top: 81px; left: 1460px;
     width: 40px; height: 40px;
 }
 
-#Index ._boxs .boxs_photo{
+#Page1 ._boxs .boxs_photo{
     position: absolute;
     left: 4px; top: 4px;
     width: 192px; height: 192px;
     overflow: hidden;
 }
-#Index ._boxs .boxs_tit{
+#Page1 ._boxs .boxs_tit{
     position: absolute;
     left: 229px; top: 0px;
     width: 436px; height: 106px;
@@ -132,7 +126,7 @@
     align-items: center;
 
 }
-#Index ._boxs .boxs_desc{
+#Page1 ._boxs .boxs_desc{
     position: absolute;
     left: 229px; top: 116px;
     width: 436px; height: 86px;
@@ -140,7 +134,7 @@
     text-align: left;
     overflow: hidden;
 }
-#Index ._boxs .pot1{
+#Page1 ._boxs .pot1{
     position: absolute;
     left: 170px; top: 170px;
     width: 20px; height: 20px;

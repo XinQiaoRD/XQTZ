@@ -93,7 +93,7 @@ Room.Word.going= ()=>{
 
 Room.Word.back = (id)=>{
     Dom._unable.show();
-    cc.ppt([cc.id, "Index", "Word"] , (after)=>{
+    cc.ppt([cc.id, "Page1", "Word", "X"] , (after)=>{
         cc.m[cc.old].velocity({ opacity: 0 }, { duration: 300, display:"none", complete:()=>{
                 Dom._unable.hide();
             }});

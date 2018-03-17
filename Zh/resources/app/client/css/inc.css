@@ -18,7 +18,7 @@ table{border-collapse:collapse;border-spacing:0;}
     align-items: center;
 }
 body{
-    transform:scale(1) !important; transform-origin: top left; background-color: #000;
+    transform:scale(1) !important; transform-origin: top left; background-color: #f0e7e1;
 }
 body, #CC{
     width:1920px; height:1080px; overflow: hidden;
