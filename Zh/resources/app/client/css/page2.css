@@ -60,14 +60,14 @@
 }
 #Page2 .DBList{
     position: absolute;
-    width: 1405px; height: 475px;
-    left: 100px; top: 215px;
+    width: 1405px; height: 620px;
+    left: 100px; top: 135px;
 }
-#Page2 .DBList .swiper-slide {
+#Page2 .DBList .swiper-slide_list {
     text-align: center;
     font-size: 18px;
-    width:665px; height: 200px;
-    background: url("../../../assets/img/box.png") no-repeat;
+    width:100%; height: 100%;
+
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -135,4 +135,78 @@
     left: 170px; top: 170px;
     width: 20px; height: 20px;
     background: url("../../../assets/img/pot1.png") no-repeat;
+}
+
+#Page2 .imgMark{
+    position: absolute;
+    left: 0px; top: 66px;
+    width: 501px; height: 501px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#Page2 .imgMark img{
+    height: 501px;
+}
+#Page2 .word{
+    position: absolute;
+    left: 578px; top: 51px;
+    width: 800px; height: 457px;
+}
+#Page2 .word .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+#Page2 .word .swiper-slide {
+    text-align: left;
+    color: #666666;
+    font-size: 17px;
+    line-height: 35px;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-right: 50px;
+}
+
+#Page2 ._Page2_Swiper_Titles{
+    position: absolute;
+    left: 680px; top: 660px;
+    width: 800px; height: 80px;
+    overflow: hidden;
+    /*border-bottom: 1px solid #D6CDB9;*/
+}
+#Page2 ._Page2_Swiper_Titles ul{
+    position: absolute;
+    top: 0; left: 300px;
+    display: block;
+    height: 80px; width: 6000px;
+    z-index: 1;
+    transition: margin-left 0.2s;
+}
+#Page2 ._Page2_Swiper_Titles .line{
+    position: absolute;
+    left: 0px; top: 53px;
+    width: 800px; height: 1px;
+    border-bottom: 1px solid #D6CDB9;
+}
+#Page2 ._Page2_Swiper_Titles li{
+    float: left; text-align: center;
+    position: relative;
+    width: 150px; height: 80px;
+}
+#Page2 ._Page2_Swiper_Titles li span{
+    position: relative; top: 15px;
+    font-size: 18px; color: #6f573e;
+}
+#Page2 ._Page2_Swiper_Titles li .pot{
+    position: absolute;
+    left: 69px; top: 49px;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background-color: #D6CDB9;
+}
+#Page2 ._Page2_Swiper_Titles li.act span{
+    color: #dc5750;
+}
+#Page2 ._Page2_Swiper_Titles li.act .pot{
+    background-color: #dc5750;
 }

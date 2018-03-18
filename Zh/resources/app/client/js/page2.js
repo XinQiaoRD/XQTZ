@@ -11,6 +11,12 @@ Room.Page2.dom = ()=>{
         $("#Page2 .YearMenu").removeClass("act");
         $("#Page2 .YearMenuId"+id).addClass("act");
 
+        $("#Page2 ._Page2_Swiper_Titles ul").css("margin-left", 0);
+        $("#Page2 ._Page2_Swiper_Titles ul").each(function(){
+            $(this).find("li").removeClass("act");
+            $(this).find("li:first").addClass("act");
+        })
+
         Dom.swiper2.DBList[id].slideTo(0, 0, false);
     });
 
@@ -90,12 +96,15 @@ Room.Page2.coming = ()=>{
 Room.Page2.going = function(){
     let time = 150;
     let delay = 100;
-    $$("#Page2 .Head").hide();
+    // $$("#Page2 .Head").hide();
     $$("#Page2>.tit").velocity({ translateY:[30,0] }, {duration: time}).velocity({ translateY:[-1000,0] }, {duration: time});
     $$("#Page2 #HBox2").velocity({ translateY:[30,0] }, {duration: time, delay:delay*1}).velocity({ translateY:[-1000,0], opacity:0 }, {duration: time});
     $$("#Page2 #HBoxMenu2").velocity({ translateY:[30,0] }, {duration: time, delay:delay*2}).velocity({ translateY:[-1000,0] }, {duration: time});
     $$("#Page2 ._back").velocity({ translateY:[30,0] }, {duration: time, delay:delay*3}).velocity({ translateY:[-1000,0] }, {duration: time, complete:()=>{
-            $$("#Page2 .Head").show();
+            // $$("#Page2 .Head").show();
+            Dom.swiper2.HBox.slideTo(0, 0, false);
+            $("#Page2 .YearMenu").removeClass("act");
+            $("#Page2 .YearMenuId0").addClass("act");
         }});
 
 };

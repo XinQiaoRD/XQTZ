@@ -2,17 +2,17 @@
 Room.Page4 = {};
 Room.Page4.dom = ()=>{
 
-    $$("#HBoxMenu2 .YearMenu").click(function(){
-
-        let id = $(this).data("id");
-        let time = Math.abs(parseInt(Dom.swiper.HBox.activeIndex)-id)*260+260;
-        Dom.swiper.HBox.slideTo(id, time, false);
-
-        $(".YearMenu").removeClass("act");
-        $(".YearMenuId"+id).addClass("act");
-
-        Dom.swiper.DBList[id].slideTo(0, 0, false);
-    });
+    // $$("#HBoxMenu2 .YearMenu").click(function(){
+    //
+    //     let id = $(this).data("id");
+    //     let time = Math.abs(parseInt(Dom.swiper.HBox.activeIndex)-id)*260+260;
+    //     Dom.swiper.HBox.slideTo(id, time, false);
+    //
+    //     $(".YearMenu").removeClass("act");
+    //     $(".YearMenuId"+id).addClass("act");
+    //
+    //     Dom.swiper.DBList[id].slideTo(0, 0, false);
+    // });
 
     $$("#Page4_HBoxMenu .bot").click(()=>{
         let time = parseInt(Dom.swiper.HBox.activeIndex)*260+260;

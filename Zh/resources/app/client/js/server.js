@@ -10,11 +10,20 @@ Download.down = function(){
     var serv = zh.conf.server+"/uploads/person/";
     var local = Url.fs+"uploads/person/";
 
-    for(var i in Base.person){
-        var p = Base.person[i];
+    for(var i in Base.page1.person){
+        var p = Base.page1.person[i];
         var rs = p.person;
         if(rs.head) Server.save(serv , local, rs.head, rs.head_size);
         if(rs.photo) Server.save(serv , local, rs.photo, rs.photo_size);
+    }
+
+
+    serv = zh.conf.server+"/uploads/receive/";
+    local = Url.fs+"uploads/page2/";
+
+    for(var i in Base.page2.receive){
+        var rs = Base.page2.receive[i];
+        if(rs.img) Server.save(serv , local, rs.img, rs.img_size);
     }
 
 };

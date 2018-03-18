@@ -14,14 +14,14 @@
     width: 1600px; height: 800px; overflow: inherit !important;
     left: 160px; top: 140px;
 }
-#HBox3 .box{
+#HBox3 ._yearBox{
     position: relative;
     width: 1600px; height: 800px;
     left: 0px; top: 0px;
     /*margin-bottom: -80px;*/
     background: url("../../../assets/img/hbox.png") no-repeat;
 }
-#HBox3 .box .tit{
+#HBox3 ._yearBox .tit{
     position: absolute;
     width: 250px; height: 60px;
     left: 677px; top: 71px;
@@ -29,7 +29,7 @@
     line-height: 60px; text-align: center;
     font-family:"myFont";
 }
-#HBox3 .box .tit span{
+#HBox3 ._yearBox .tit span{
     font-size: 54px;
     font-family:"myFont";
 }
@@ -59,14 +59,14 @@
 }
 #Page3 .DBList{
     position: absolute;
-    width: 1405px; height: 475px;
-    left: 100px; top: 215px;
+    width: 1405px; height: 574px;
+    left: 100px; top: 165px;
 }
 #Page3 .DBList .swiper-slide {
     text-align: center;
     font-size: 18px;
-    width:665px; height: 200px;
-    background: url("../../../assets/img/box.png") no-repeat;
+    width:665px; height: 287px;
+    /*background: url("../../../assets/img/page3/box.png") no-repeat;*/
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -102,36 +102,108 @@
     width: 40px; height: 40px;
 }
 
-#Page3 ._boxs .boxs_photo{
+/*内容*/
+#Page3 .pagebox3{
     position: absolute;
-    left: 4px; top: 4px;
-    width: 192px; height: 192px;
+    top: 0px; left: 10px;
+    width: 670px; height: 274px;
+    background: url("../../../assets/img/page3/box.png") no-repeat;
+    text-align: left;
     overflow: hidden;
 }
-#Page3 ._boxs .boxs_tit{
+#Page3 .pagebox3_title{
     position: absolute;
-    left: 229px; top: 0px;
-    width: 436px; height: 106px;
+    top: 10px; left: 39px;
+    height: 36px; line-height: 36px;
+    font-size: 24px; color:#dc5750 ;
+    background-color: #fff;
+}
+#Page3 .pagebox3_info{
+    position: absolute;
+    top: 54px; left: 39px;
+    width:592px; height: 101px; line-height: 33px;
+    font-size: 18px; color: #666;
+    overflow: hidden;
+}
+#Page3 .pagebox3_back{
+    position: absolute;
+    top: 186px; left: 39px;
+    width:129px; height: 33px; line-height: 33px;
+    font-size: 18px; color: #afafaf;
+    z-index: 9;
+    background-color: #fff;
+
+}
+#Page3 .pagebox3_back span{
+    color: #dc5750;
+}
+#Page3 .pagebox3_work{
+    position: absolute;
+    top: 186px; right: 39px;
+    height: 33px; line-height: 33px;
+    font-size: 18px; color: #afafaf;
+}
+#Page3 .pagebox3_work span{
+    color: #dc5750;
+}
+
+
+/*Page3_Info*/
+.Page3_Info{ background: inherit}
+.Page3_Info .bgx{
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background:rgba(0,0,0,0.3);
+}
+.Page3_Info .cls{
+    position: absolute;
+    right: 30px; top: 32px;
+    width: 25px; height: 25px;
+    background: url("../../../assets/img/word/cls.png") no-repeat;
+}
+.Page3_Info .box{
+    position: absolute;
+    width: 820px; height: 940px;
+    left: 548px; top: 140px;
+    background-color: #fff;
+}
+.Page3_Info .line{
+    width: 705px; height: 30px; line-height: 30px; margin-left: 60px;
+    background: url(../../../assets/img/page3/line.jpg) repeat-x;
+}
+.Page3_Info .title{
+    margin-top: 100px;
+}
+.Page3_Info .title>.tit{
     font-size: 24px; color: #dc5750;
-    text-align: left;
-    overflow: hidden;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    height: 30px; display: inline-block;
+    margin-left: 33px;
+    background-color: #fff;
 }
-#Page3 ._boxs .boxs_desc{
-    position: absolute;
-    left: 229px; top: 116px;
-    width: 436px; height: 86px;
-    font-size: 16px; color: #666;
-    text-align: left;
-    overflow: hidden;
+.Page3_Info .m_info{
+    margin-left: 60px; margin-top: 20px;
+    width: 705px; text-align: justify;
+    font-size: 18px; color: #6f573e;
+    line-height: 33px;
 }
-#Page3 ._boxs .pot1{
-    position: absolute;
-    left: 170px; top: 170px;
-    width: 20px; height: 20px;
-    background: url("../../../assets/img/pot1.png") no-repeat;
+.Page3_Info .back{
+    margin-top: 30px;
+}
+.Page3_Info .back>.tit{
+    font-size: 24px; color: #dc5750;
+    height: 30px; display: inline-block;
+    margin-left: 33px;
+    background-color: #fff;
+}
+
+.Page3_Info .unline{
+    margin-top: 30px;
+}
+.Page3_Info .work{
+    margin-top: 20px; margin-left: 90px;
+    height: 30px; line-height: 30px;
+    font-size: 18px; color: #6f573e;
+}
+.Page3_Info .work span{
+    color: #dc5750;
 }

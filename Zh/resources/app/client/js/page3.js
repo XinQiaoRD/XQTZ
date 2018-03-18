@@ -2,39 +2,39 @@
 Room.Page3 = {};
 Room.Page3.dom = ()=>{
 
-    // $$("#HBoxMenu3 .YearMenu").click(function(){
-    //
-    //     let id = $(this).data("id");
-    //     let time = Math.abs(parseInt(Dom.swiper.HBox.activeIndex)-id)*260+260;
-    //     Dom.swiper.HBox.slideTo(id, time, false);
-    //
-    //     $(".YearMenu").removeClass("act");
-    //     $(".YearMenuId"+id).addClass("act");
-    //
-    //     Dom.swiper.DBList[id].slideTo(0, 0, false);
-    // });
-    //
-    // $$("#HBoxMenu3 .bot").click(()=>{
-    //     let time = parseInt(Dom.swiper.HBox.activeIndex)*260+260;
-    //
-    //     Dom.swiper.HBox.slideTo(0, time, false);
-    //     $(".YearMenu").removeClass("act");
-    //     $(".YearMenuId0").addClass("act");
-    //
-    //     Dom.swiper.DBList[0].slideTo(0, 0, false);
-    // });
-    //
-    // $$("#Page3 ._yearBox .pre").click(function(){
-    //     let id = $(this).data("id");
-    //     Dom.swiper.DBList[id].slidePrev();
-    // });
-    //
-    // $$("#Page3 ._yearBox .next").click(function(){
-    //     let id = $(this).data("id");
-    //     Dom.swiper.DBList[id].slideNext();
-    // });
+    $$("#HBoxMenu3 .YearMenu").click(function(){
 
-    $$("#Page3 ._boxs .boxs_photo").click(function(){
+        let id = $(this).data("id");
+        let time = Math.abs(parseInt(Dom.swiper3.HBox.activeIndex)-id)*260+260;
+        Dom.swiper3.HBox.slideTo(id, time, false);
+
+        $("#Page3 .YearMenu").removeClass("act");
+        $("#Page3 .YearMenuId"+id).addClass("act");
+
+        Dom.swiper3.DBList[id].slideTo(0, 0, false);
+    });
+
+    $$("#HBoxMenu3 .bot").click(()=>{
+        let time = parseInt(Dom.swiper3.HBox.activeIndex)*260+260;
+
+        Dom.swiper3.HBox.slideTo(0, time, false);
+        $("#Page3 .YearMenu").removeClass("act");
+        $("#Page3 .YearMenuId0").addClass("act");
+
+        Dom.swiper.DBList[0].slideTo(0, 0, false);
+    });
+
+    $$("#Page3 ._yearBox .pre").click(function(){
+        let id = $(this).data("id");
+        Dom.swiper3.DBList[id].slidePrev();
+    });
+
+    $$("#Page3 ._yearBox .next").click(function(){
+        let id = $(this).data("id");
+        Dom.swiper3.DBList[id].slideNext();
+    });
+
+    $$("#Page3 .pagebox3").click(function(){
         let id = $(this).data("id");
         Room.Page3.ppt(id);
     });
@@ -43,19 +43,26 @@ Room.Page3.dom = ()=>{
         Room.Page3.ppt_back();
     });
 
+    $$(".Page3_Info .cls").click(function(){
+        let id = $(this).data("id");
+        Room.Page3_Info.ppt(id);
+    });
+
+    $$(".Page3_Info .bgx").click(function(){
+        let id = $(this).data("id");
+        Room.Page3_Info.ppt(id);
+    });
+
 };
 
-// Room.Page3.ppt = (id)=>{
-//     Dom._unable.show();
-//     cc.ppt([cc.id, "Word"+id, "X", "Word"] , (after)=>{
-//         //cc.m[cc.old].velocity({ opacity: 0 }, { duration: 500, display:"none"});
-//         cc.m["Word"+id].show().velocity({ opacity: [1,0] }, 100, ()=>{
-//             //after.come();
-//             after.come();
-//         });
-//     });
-//
-// };
+Room.Page3.ppt = (id)=>{
+    Dom._unable.show();
+    cc.ppt([cc.id, "Page3_Info"+id, "X", "Page3_Info"] , (after)=>{
+        //cc.m[cc.old].velocity({ opacity: 0 }, { duration: 500, display:"none"});
+        cc.m["Page3_Info"+id].show().velocity({ opacity: [1,0] }, 100);
+    });
+
+};
 
 Room.Page3.ppt_back = ()=>{
     cc.ppt([cc.id, "Nav"] , (after)=>{
@@ -98,4 +105,32 @@ Room.Page3.going = function(){
             $$("#Page3 .Head").show();
         }});
 
+};
+
+
+Room.Page3_Info = {};
+Room.Page3_Info.come_before = (next)=>{
+    let $box = cc.m[cc.id].find(".box");
+    $box.velocity({ translateY: 940 }, { duration: 0});
+    next();
+};
+Room.Page3_Info.coming = ()=>{
+    let $box = cc.m[cc.id].find(".box");
+    $box.velocity({ translateY: 0 }, { duration: 220, complete:function(){
+            Dom._unable.hide();
+        }});
+};
+
+Room.Page3_Info.going= ()=>{
+    let $box = cc.m[cc.old].find(".box");
+    $box.velocity({ translateY: 940 }, { duration: 220});
+};
+
+Room.Page3_Info.ppt = (id)=>{
+    Dom._unable.show();
+    cc.ppt([cc.id, "Page3", "Page3_Info", "X"] , (after)=>{
+        cc.m[cc.old].velocity({ opacity: 0 }, { duration: 300, display:"none", complete:()=>{
+                Dom._unable.hide();
+            }});
+    });
 };
