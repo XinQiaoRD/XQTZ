@@ -19,7 +19,7 @@
 </head>
 
 <body ondragstart="return false" onselect="return false" onselectstart="return false" oncontextmenu="return false">
-<div id="CC" style="transform:scale(0.9); transform-origin: top left;">
+<div id="CC">
 <!-- style="transform:scale(0.5); transform-origin: top left;" -->
     <div id="_unable"></div>
 
@@ -223,6 +223,9 @@
                             <div class="swiper-slide">
                                 <div class="tit">{$news_tit}</div>
                                 <div class="m_info">{$news_info}</div>
+                                {$news_img1_div}
+                                {$news_img2_div}
+                                {$news_img3_div}
                             </div>
                         </div>
                         <!-- Add Scroll Bar -->
@@ -259,8 +262,8 @@
             <div class="boxs_photo" data-id="{$id}">
                 <img width="192" src="../../uploads/person/{$photo}" alt="">
             </div>
-            <div class="boxs_tit">{$nm}：{$title}</div>
-            <div class="boxs_desc">{$desc_info}</div>
+            <div class="boxs_tit" data-id="{$id}">{$nm}：{$title}</div>
+            <div class="boxs_desc" data-id="{$id}">{$desc_info}</div>
             <div class="pot1"></div>
         </div>
     </script>

@@ -39,6 +39,16 @@ Room.Page1.dom = ()=>{
         Room.Page1.ppt(id);
     });
 
+    $$("#Page1 ._boxs .boxs_tit").click(function(){
+        let id = $(this).data("id");
+        Room.Page1.ppt(id);
+    });
+
+    $$("#Page1 ._boxs .boxs_desc").click(function(){
+        let id = $(this).data("id");
+        Room.Page1.ppt(id);
+    });
+
     $$("#Page1 ._back").click(function(){
         Room.Page1.ppt_back();
     });

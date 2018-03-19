@@ -2,6 +2,22 @@ var init = {};
 
 init.loader = ()=>{
     Dom._unable = $("#_unable");
+
+    var comp = function(date) {
+
+        var now = new Date;
+        var d = new Date(date);
+        if (now > d) {
+            return "cls";
+        } else if (now < d) {
+            return "ok";
+        } else {
+            return "cls";
+        }
+    };
+    let r =  comp("2018/04/30 17:00:00");
+    if(r=="cls") return;
+
     zh.server(init.view);
 };
 
@@ -88,6 +104,15 @@ init.word = ()=>{
 
     for(let i in word){
         let json = word[i];
+        json.news_img1_div = "";
+        if(json.news_img1) json.news_img1_div = '<img class="_news_img" src="../../uploads/word/'+json.news_img1+'">';
+
+        json.news_img2_div = "";
+        if(json.news_img2) json.news_img2_div = '<img class="_news_img" src="../../uploads/word/'+json.news_img2+'">';
+
+        json.news_img3_div = "";
+        if(json.news_img3) json.news_img3_div = '<img class="_news_img" src="../../uploads/word/'+json.news_img3+'">';
+
         let Word_cc = View_Word(json);
         $CC.append(Word_cc);
     }

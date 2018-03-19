@@ -64,8 +64,8 @@
 }
 #Page1 .DBList{
     position: absolute;
-    width: 1405px; height: 475px;
-    left: 100px; top: 215px;
+    width: 1405px; height: 575px;
+    left: 100px; top: 175px;
 }
 #Page1 .DBList .swiper-slide {
     text-align: center;
