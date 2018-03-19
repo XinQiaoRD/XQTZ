@@ -45,7 +45,7 @@ init.view = ()=>{
         zh.ini();
         zh.do();
         setTimeout(Room.Loader.ppt , 500);
-    },300);
+    },500);
 
 
 
@@ -156,7 +156,7 @@ init.word = ()=>{
         }
 
         $(".Word").hide();
-    },200);
+    },500);
 
 
 
