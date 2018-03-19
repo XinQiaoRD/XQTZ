@@ -60,14 +60,11 @@
 }
 #Page4 .DBList{
     position: absolute;
-    width: 1405px; height: 475px;
-    left: 100px; top: 215px;
+    width: 733px; height: 465px;
+    left: 765px; top: 242px;
 }
-#Page4 .DBList .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    width:665px; height: 200px;
-    background: url("../../../assets/img/box.png") no-repeat;
+#Page4 .DBList ._PageBox4.swiper-slide {
+    width:733px; height: 465px;
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -83,15 +80,28 @@
     -webkit-align-items: center;
     align-items: center;
 }
-#Page4 .swiper-pagination-box{
-    position: relative;
-    top: 740px;
-    width: 1600px; text-align: center;
+#Page4 ._PageWord4{
+    position: absolute;
+    left: 0px; top: 0px;
+    width: 733px; height: 465px;
 }
-#Page4 .swiper-pagination-box .swiper-pagination-bullet{
-    background-color: #6f573e!important; width: 8px!important; height: 8px!important;
-    border-radius:0px !important; margin-right: 10px!important;
+#Page4 ._PageWord4 .swiper-container {
+    width: 100%;
+    height: 100%;
 }
+#Page4 ._PageWord4 .swiper-slide {
+    text-align: left;
+    color: #666666;
+    font-size: 17px;
+    line-height: 35px;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-right: 50px;
+}
+
+
+
 #Page4 ._yearBox .pre{
     position: absolute;
     top: 81px; left: 1417px;
@@ -136,3 +146,66 @@
     width: 20px; height: 20px;
     background: url("../../../assets/img/pot1.png") no-repeat;
 }
+
+#Page4 ._Page4_Swiper_Titles{
+    position: absolute;
+    left: 765px; top: 180px;
+    width: 733px; height: 36px;
+    overflow: hidden;
+}
+#Page4 ._Page4_Swiper_Titles ul{
+    position: absolute;
+    top: 0; left: 150px;
+    display: block;
+    height: 36px; width: 6000px;
+    z-index: 1;
+    transition: margin-left 0.2s;
+}
+#Page4 ._Page4_Swiper_Titles li{
+    float: left; text-align: center;
+    position: relative;
+    width: 150px; height: 36px; line-height: 36px;
+    font-size: 19px; color: #6f573e;
+    background: url("../../../assets/img/page4/nm.png") no-repeat;
+}
+#Page4 ._Page4_Swiper_Titles li.act{
+    color: #dc5750;
+    background: url("../../../assets/img/page4/nm_act.png") no-repeat;
+}
+
+
+
+#Page4 .ImgList{
+    position: absolute;
+    width: 620px; height: 505px;
+    left: 100px; top: 200px;
+}
+#Page4 .ImgList .swiper-slide {
+    width:620px; height: 450px;
+    overflow: hidden;
+    /*background: url("../../../assets/img/page3/box.png") no-repeat;*/
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+#Page4 .ImgListPag.swiper-pagination-box{
+    position: relative;
+    top: 670px;
+    width: 820px; text-align: center;
+}
+#Page4 .ImgListPag.swiper-pagination-box .swiper-pagination-bullet{
+    background-color: #6f573e!important; width: 8px!important; height: 8px!important;
+    border-radius:0px !important; margin-right: 10px!important;
+}
+

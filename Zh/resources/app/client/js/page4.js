@@ -2,41 +2,47 @@
 Room.Page4 = {};
 Room.Page4.dom = ()=>{
 
-    // $$("#HBoxMenu2 .YearMenu").click(function(){
-    //
-    //     let id = $(this).data("id");
-    //     let time = Math.abs(parseInt(Dom.swiper.HBox.activeIndex)-id)*260+260;
-    //     Dom.swiper.HBox.slideTo(id, time, false);
-    //
-    //     $(".YearMenu").removeClass("act");
-    //     $(".YearMenuId"+id).addClass("act");
-    //
-    //     Dom.swiper.DBList[id].slideTo(0, 0, false);
-    // });
+    $$("#HBoxMenu4 .YearMenu").click(function(){
 
-    $$("#Page4_HBoxMenu .bot").click(()=>{
-        let time = parseInt(Dom.swiper.HBox.activeIndex)*260+260;
+        let id = $(this).data("id");
+        let time = Math.abs(parseInt(Dom.swiper4.HBox.activeIndex)-id)*260+260;
+        Dom.swiper4.HBox.slideTo(id, time, false);
 
-        Dom.swiper.HBox.slideTo(0, time, false);
-        $(".YearMenu").removeClass("act");
-        $(".YearMenuId0").addClass("act");
+        $("#Page4 .YearMenu").removeClass("act");
+        $("#Page4 .YearMenuId"+id).addClass("act");
 
-        Dom.swiper.DBList[0].slideTo(0, 0, false);
+        Dom.swiper4.DBList[id].slideTo(0, 0, false);
+    });
+
+    $$("#HBoxMenu4 .bot").click(()=>{
+        let time = parseInt(Dom.swiper4.HBox.activeIndex)*260+260;
+
+        Dom.swiper4.HBox.slideTo(0, time, false);
+        $("#Page4 .YearMenu").removeClass("act");
+        $("#Page4 .YearMenuId0").addClass("act");
+
+        Dom.swiper4.DBList[0].slideTo(0, 0, false);
     });
 
     $$("#Page4 ._yearBox .pre").click(function(){
         let id = $(this).data("id");
-        Dom.swiper.DBList[id].slidePrev();
+        Dom.swiper4.DBList[id].slidePrev();
     });
 
     $$("#Page4 ._yearBox .next").click(function(){
         let id = $(this).data("id");
-        Dom.swiper.DBList[id].slideNext();
+        Dom.swiper4.DBList[id].slideNext();
     });
 
-    $$("#Page4 ._boxs .boxs_photo").click(function(){
-        let id = $(this).data("id");
-        Room.Page4.ppt(id);
+    $("._Page4_Swiper_Titles li").each(function(i){
+        $(this).click(function(){
+            let id = $(this).data("id");
+            let y = $(this).data("y");
+            Dom.swiper4.DBList[id].slideTo(i, 200, false);
+            $("#Page4 ._Page4_Swiper_Titles"+y+" ul li").removeClass("act");
+            $("#Page4 ._Page4_Swiper_Titles"+y+" ul li:eq("+i+")").addClass("act");
+            $("#Page4 ._Page4_Swiper_Titles"+y+" ul").css("margin-left", i*-150);
+        })
     });
 
     $$("#Page4 ._back").click(function(){
@@ -45,17 +51,6 @@ Room.Page4.dom = ()=>{
 
 };
 
-Room.Page4.ppt = (id)=>{
-    Dom._unable.show();
-    cc.ppt([cc.id, "Word"+id, "X", "Word"] , (after)=>{
-        //cc.m[cc.old].velocity({ opacity: 0 }, { duration: 500, display:"none"});
-        cc.m["Word"+id].show().velocity({ opacity: [1,0] }, 100, ()=>{
-            //after.come();
-            after.come();
-        });
-    });
-
-};
 
 Room.Page4.ppt_back = ()=>{
     cc.ppt([cc.id, "Nav"] , (after)=>{

@@ -26,9 +26,9 @@ init.page2 = ()=>{
 
         let ids = Base.page2.year_id[y];
         let menu_li = "";
-        for(let i in ids){
+        for(let it in ids){
             menu_li+= '<li>' +
-                '<span>'+Base.page2.receive[ids[i]].title+'</span>' +
+                '<span>'+Base.page2.receive[ids[it]].title+'</span>' +
                 '<div class="pot"></div>' +
                 '</li>';
         }
@@ -88,8 +88,6 @@ init.swiper2 = ()=>{
                 slideChangeTransitionEnd: function(){
 
                     let ids = this.activeIndex;
-
-
                     $("#Page2 ._Page2_Swiper_Titles"+year[i]+" ul li").removeClass("act");
                     $("#Page2 ._Page2_Swiper_Titles"+year[i]+" ul li:eq("+ids+")").addClass("act");
                     $("#Page2 ._Page2_Swiper_Titles"+year[i]+" ul").css("margin-left", ids*-150);

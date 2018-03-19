@@ -40,28 +40,12 @@ Room.Page2.dom = ()=>{
         Dom.swiper2.DBList[id].slideNext();
     });
 
-    $$("#Page2 ._boxs .boxs_photo").click(function(){
-        let id = $(this).data("id");
-        Room.Page2.ppt(id);
-    });
-
     $$("#Page2 ._back").click(function(){
         Room.Page2.ppt_back();
     });
 
 };
 
-Room.Page2.ppt = (id)=>{
-    Dom._unable.show();
-    cc.ppt([cc.id, "Word"+id, "X", "Word"] , (after)=>{
-        //cc.m[cc.old].velocity({ opacity: 0 }, { duration: 500, display:"none"});
-        cc.m["Word"+id].show().velocity({ opacity: [1,0] }, 100, ()=>{
-            //after.come();
-            after.come();
-        });
-    });
-
-};
 
 Room.Page2.ppt_back = ()=>{
     cc.ppt([cc.id, "Nav"] , (after)=>{

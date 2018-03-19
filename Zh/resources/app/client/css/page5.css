@@ -1,6 +1,5 @@
 ﻿@charset "utf-8";
 
-
 /*Page5*/
 #Page5{
     background-color: inherit;
@@ -15,14 +14,14 @@
     width: 1600px; height: 800px; overflow: inherit !important;
     left: 160px; top: 140px;
 }
-#HBox5 .box{
+#HBox5 ._yearBox{
     position: relative;
     width: 1600px; height: 800px;
     left: 0px; top: 0px;
     /*margin-bottom: -80px;*/
     background: url("../../../assets/img/hbox.png") no-repeat;
 }
-#HBox5 .box .tit{
+#HBox5 ._yearBox .tit{
     position: absolute;
     width: 250px; height: 60px;
     left: 677px; top: 71px;
@@ -30,7 +29,7 @@
     line-height: 60px; text-align: center;
     font-family:"myFont";
 }
-#HBox5 .box .tit span{
+#HBox5 ._yearBox .tit span{
     font-size: 54px;
     font-family:"myFont";
 }
@@ -60,14 +59,14 @@
 }
 #Page5 .DBList{
     position: absolute;
-    width: 1405px; height: 475px;
-    left: 100px; top: 215px;
+    width: 1405px; height: 574px;
+    left: 100px; top: 165px;
 }
 #Page5 .DBList .swiper-slide {
     text-align: center;
     font-size: 18px;
-    width:665px; height: 200px;
-    background: url("../../../assets/img/box.png") no-repeat;
+    width:665px; height: 191px;
+    /*background: url("../../../assets/img/Page5/box.png") no-repeat;*/
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -103,36 +102,86 @@
     width: 40px; height: 40px;
 }
 
-#Page5 ._boxs .boxs_photo{
+/*内容*/
+#Page5 .pagebox5{
     position: absolute;
-    left: 4px; top: 4px;
-    width: 192px; height: 192px;
+    top: 20px; left: 20px;
+    width: 404px; height: 192px;
+    border: 4px solid #e5e5e5;
     overflow: hidden;
 }
-#Page5 ._boxs .boxs_tit{
+#Page5 .pagebox5>.tit{
     position: absolute;
-    left: 229px; top: 0px;
-    width: 436px; height: 106px;
+    top: 84px; left: 0px;
+    height: 63px; width: 404px; line-height: 63px;
+    font-size: 32px; color:#fff ;
+    text-align: center;
+    font-family: "Microsoft YaHei", "Myriad Pro", "微软雅黑", "宋体", "Arial";
+    text-shadow: 3px 2px 0px #666;
+    background-color:rgba(0,0,0,0.25);
+}
+
+
+/*Page5_Info*/
+.Page5_Info{ background: inherit}
+.Page5_Info .bgx{
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background:rgba(0,0,0,0.3);
+}
+.Page5_Info .cls{
+    position: absolute;
+    right: 30px; top: 32px;
+    width: 25px; height: 25px;
+    background: url("../../../assets/img/word/cls.png") no-repeat;
+}
+.Page5_Info .box{
+    position: absolute;
+    width: 820px; height: 920px;
+    left: 548px; top: 140px;
+    overflow: hidden;
+
+}
+.Page5_Info .main{
+    position: absolute; left: 0; bottom: 0;
+    width: 820px; height: auto;
+}
+.Page5_Info .tit{
+    width: 820px; height: 143px;
+    background-color:rgba(0,0,0,0.25);
+    color: #fff;
+}
+.Page5_Info .tit .title{
+    font-size: 40px; margin-left: 60px; padding-top: 30px;
+}
+.Page5_Info .tit .money{
+    font-size: 24px; margin-left: 60px; margin-top: 5px;
+}
+.Page5_Info .mm{
+    width: 820px;
+    background-color: #fff; min-height:521px ;
+}
+.Page5_Info .line{
+    width: 705px; height: 30px; line-height: 30px; margin-left: 60px;
+    background: url(../../../assets/img/page3/line.jpg) repeat-x;
+}
+.Page5_Info .line span{
     font-size: 24px; color: #dc5750;
-    text-align: left;
-    overflow: hidden;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    height: 30px; display: inline-block;
+    margin-left: 33px;
+    background-color: #fff;
 }
-#Page5 ._boxs .boxs_desc{
-    position: absolute;
-    left: 229px; top: 116px;
-    width: 436px; height: 86px;
-    font-size: 16px; color: #666;
-    text-align: left;
-    overflow: hidden;
+.Page5_Info .word{
+    margin-left: 60px; margin-top: 20px; margin-bottom: 20px;
+    width: 705px; text-align: justify;
+    font-size: 18px; color: #6f573e;
+    line-height: 33px;
 }
-#Page5 ._boxs .pot1{
-    position: absolute;
-    left: 170px; top: 170px;
-    width: 20px; height: 20px;
-    background: url("../../../assets/img/pot1.png") no-repeat;
+.Page5_Info .ww{
+    margin-top: 20px; margin-left: 90px;
+    height: 30px; line-height: 30px;
+    font-size: 18px; color: #6f573e;
+}
+.Page5_Info .ww span{
+    color: #dc5750;
 }
