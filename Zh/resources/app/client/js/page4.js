@@ -60,6 +60,9 @@ Room.Page4.ppt_back = ()=>{
 };
 
 Room.Page4.come_before = (next)=>{
+
+    Dom.swiper4.HBox.slideTo(0, 0, false);
+
     $$("#Page4 .Head").hide();
     $$("#Page4>.tit").velocity({ translateY:1080 }, {duration: 0} );
     $$("#Page4 #HBox4").velocity({ translateY:1080, opacity:1 }, {duration: 0} );

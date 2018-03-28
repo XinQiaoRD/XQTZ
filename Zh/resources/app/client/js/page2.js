@@ -55,6 +55,8 @@ Room.Page2.ppt_back = ()=>{
 };
 
 Room.Page2.come_before = (next)=>{
+    Dom.swiper2.HBox.slideTo(0, 0, false);
+
     $$("#Page2 .Head").hide();
     $$("#Page2>.tit").velocity({ translateY:1080 }, {duration: 0} );
     $$("#Page2 #HBox2").velocity({ translateY:1080, opacity:1 }, {duration: 0} );

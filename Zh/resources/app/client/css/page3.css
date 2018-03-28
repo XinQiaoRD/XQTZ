@@ -127,21 +127,22 @@
 }
 #Page3 .pagebox3_back{
     position: absolute;
-    top: 186px; left: 39px;
+    top: 186px;  right: 39px;
     width:129px; height: 33px; line-height: 33px;
     font-size: 18px; color: #afafaf;
-    z-index: 9;
+    text-align: right;
     background-color: #fff;
 
 }
 #Page3 .pagebox3_back span{
-    color: #dc5750;
+    /*color: #dc5750;*/
 }
 #Page3 .pagebox3_work{
     position: absolute;
-    top: 186px; right: 39px;
+    top: 186px; left: 39px;
     height: 33px; line-height: 33px;
     font-size: 18px; color: #afafaf;
+    z-index: 9;
 }
 #Page3 .pagebox3_work span{
     color: #dc5750;

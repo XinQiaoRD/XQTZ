@@ -38,6 +38,7 @@ init.page3 = ()=>{
     let Page_html = "";
     for(let i in message){
         let json =message[i];
+        if(!json.back_info) json.back_info = "处理中";
         Page_html = View_Page(json);
         $CC.append(Page_html);
     }

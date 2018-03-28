@@ -73,6 +73,9 @@ Room.Page5.ppt_back = ()=>{
 };
 
 Room.Page5.come_before = (next)=>{
+
+    Dom.swiper5.HBox.slideTo(0, 0, false);
+
     $$("#Page5 .Head").hide();
     $$("#Page5>.tit").velocity({ translateY:1080 }, {duration: 0} );
     $$("#Page5 #HBox5").velocity({ translateY:1080, opacity:1 }, {duration: 0} );

@@ -72,6 +72,9 @@ Room.Page3.ppt_back = ()=>{
 };
 
 Room.Page3.come_before = (next)=>{
+
+    Dom.swiper3.HBox.slideTo(0, 0, false);
+
     $$("#Page3 .Head").hide();
     $$("#Page3>.tit").velocity({ translateY:1080 }, {duration: 0} );
     $$("#Page3 #HBox3").velocity({ translateY:1080, opacity:1 }, {duration: 0} );
