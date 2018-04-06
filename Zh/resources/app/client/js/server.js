@@ -50,4 +50,24 @@ Download.down = function(){
         if(rs.img) Server.save(serv , local, rs.img, rs.img_size);
     }
 
+    serv = zh.conf.server+"/uploads/lead/";
+    local = Url.fs+"uploads/page6/";
+    for(var i in Base.page6.lead){
+        var imgs = Base.page6.lead[i].imgs;
+        var imgs_size = Base.page6.lead[i].imgs_size;
+        for(var it in imgs){
+            Server.save(serv , local, imgs[it], imgs_size[it]);
+        }
+    }
+
+    serv = zh.conf.server+"/uploads/inspect/";
+    local = Url.fs+"uploads/page7/";
+    for(var i in Base.page7.inspect){
+        var imgs = Base.page7.inspect[i].imgs;
+        var imgs_size = Base.page7.inspect[i].imgs_size;
+        for(var it in imgs){
+            Server.save(serv , local, imgs[it], imgs_size[it]);
+        }
+    }
+
 };

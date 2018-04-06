@@ -70,10 +70,10 @@ Room.Page2.coming = ()=>{
     let time = 230;
     let delay = 100;
 
-    $$("#Page2>.tit").velocity({ translateY:-30 }, {duration: time, delay:delay*5} ).velocity({ translateY:0 }, {duration: time} );
-    $$("#Page2 #HBox2").velocity({ translateY:-30 }, {duration: time, delay:delay*6} ).velocity({ translateY:0 }, {duration: time} );
-    $$("#Page2 #HBoxMenu2").velocity({ translateY:-30 }, {duration: time, delay:delay*7} ).velocity({ translateY:0 }, {duration: time} );
-    $$("#Page2 ._back").velocity({ translateY:-30 }, {duration: time, delay:delay*8} ).velocity({ translateY:0 }, {duration: time, complete:()=>{
+    $$("#Page2>.tit").velocity({ translateY:-30 }, {duration: time, delay:delay*9} ).velocity({ translateY:0 }, {duration: time} );
+    $$("#Page2 #HBox2").velocity({ translateY:-30 }, {duration: time, delay:delay*10} ).velocity({ translateY:0 }, {duration: time} );
+    $$("#Page2 #HBoxMenu2").velocity({ translateY:-30 }, {duration: time, delay:delay*11} ).velocity({ translateY:0 }, {duration: time} );
+    $$("#Page2 ._back").velocity({ translateY:-30 }, {duration: time, delay:delay*12} ).velocity({ translateY:0 }, {duration: time, complete:()=>{
             $$("#Page2 .Head").show();
             Dom._unable.hide();
         }} );

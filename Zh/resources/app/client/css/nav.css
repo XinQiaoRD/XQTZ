@@ -12,18 +12,19 @@
 }
 
 #Nav .btn{
-    position: absolute; width: 280px; height: 665px;
-    top:250px;
+    position: absolute; width: 360px; height: 340px;
 }
 #Nav .btn img{
     opacity: 0;
 }
 
-#Nav .btn1{ left: 160px; background: url("../../../assets/img/nav/btn1.png")}
-#Nav .btn2{ left: 490px; background: url("../../../assets/img/nav/btn2.png")}
-#Nav .btn3{ left: 820px; background: url("../../../assets/img/nav/btn3.png")}
-#Nav .btn4{ left: 1150px; background: url("../../../assets/img/nav/btn4.png")}
-#Nav .btn5{ left: 1480px; background: url("../../../assets/img/nav/btn5.png")}
+#Nav .btn1{ top:212px; left: 160px; background: url("../../../assets/img/nav/btn1x.png") no-repeat}
+#Nav .btn2{ top:212px; left: 573px; background: url("../../../assets/img/nav/btn2x.png") no-repeat}
+#Nav .btn3{ top:212px; left: 987px; background: url("../../../assets/img/nav/btn3x.png") no-repeat}
+#Nav .btn4{ top:212px; left: 1400px; background: url("../../../assets/img/nav/btn4x.png") no-repeat}
+#Nav .btn5{ top:602px; left: 366px; background: url("../../../assets/img/nav/btn5x.png") no-repeat}
+#Nav .btn6{ top:602px; left: 779px; background: url("../../../assets/img/nav/btn6x.png") no-repeat}
+#Nav .btn7{ top:602px; left: 1192px; background: url("../../../assets/img/nav/btn7x.png") no-repeat}
 
 /*Public*/
 ._back{

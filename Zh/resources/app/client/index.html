@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/page3.css">
     <link rel="stylesheet" href="css/page4.css">
     <link rel="stylesheet" href="css/page5.css">
+    <link rel="stylesheet" href="css/page6.css">
+    <link rel="stylesheet" href="css/page7.css">
 
 </head>
 
@@ -45,6 +47,14 @@
         </div>
         <div class="btn btn5">
             <img src="../../assets/img/nav/btn5x.png" alt="">
+        </div>
+
+        <div class="btn btn6">
+            <img src="../../assets/img/nav/btn6x.png" alt="">
+        </div>
+
+        <div class="btn btn7">
+            <img src="../../assets/img/nav/btn7x.png" alt="">
         </div>
 
     </section>
@@ -158,6 +168,54 @@
         </div>
 
         <div id="HBoxMenu5">
+            <div class="tit"></div>
+            <div class="box act">2018</div>
+            <div class="box">2017</div>
+            <div class="box">2016</div>
+            <div class="bot"></div>
+        </div>
+
+        <div class="_back"></div>
+
+    </section>
+
+    <section class="cc" id="Page6">
+
+        <img class="tit" src="../../assets/img/page6/tit.png" alt="">
+
+        <div class="Head"></div>
+        <div id="HBox6" class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">1</div>
+                <div class="swiper-slide">2</div>
+            </div>
+        </div>
+
+        <div id="HBoxMenu6">
+            <div class="tit"></div>
+            <div class="box act">2018</div>
+            <div class="box">2017</div>
+            <div class="box">2016</div>
+            <div class="bot"></div>
+        </div>
+
+        <div class="_back"></div>
+
+    </section>
+
+    <section class="cc" id="Page7">
+
+        <img class="tit" src="../../assets/img/page7/tit.png" alt="">
+
+        <div class="Head"></div>
+        <div id="HBox7" class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">1</div>
+                <div class="swiper-slide">2</div>
+            </div>
+        </div>
+
+        <div id="HBoxMenu7">
             <div class="tit"></div>
             <div class="box act">2018</div>
             <div class="box">2017</div>
@@ -488,6 +546,90 @@
         </section>
     </script>
 
+
+    <!--Page6-->
+    <script type="text/template" id="View_HBox6">
+        <div class="swiper-slide box box{$year} _yearBox">
+            <div class="tit"><span>{$year}</span>年</div>
+
+            <div class="DBList{$year} DBList swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                </div>
+                <!-- Add Pagination -->
+            </div>
+
+            <div class="pre" data-id="{$id}"></div>
+            <div class="next" data-id="{$id}"></div>
+
+            <!--<div class="_Page6_Swiper_Titles _Page6_Swiper_Titles{$year}">-->
+                <!--<ul class="sw_tit">-->
+                    <!--<li class="act">标题</li>-->
+                    <!--<li>标题标题</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        </div>
+        </div>
+    </script>
+    <script type="text/template" id="View_PageBox6">
+        <div class="swiper-slide _boxs _PageBox6">
+
+            <div class="ImgList{$year}_{$id} ImgList swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                </div>
+                <!-- Add Pagination -->
+            </div>
+            <div class="ImgListPag ImgListPag{$year}_{$id} swiper-pagination-box swiper-pagination-box{$year}_{$id}"></div>
+
+            <div class="Page6_title">{$title}</div>
+            <div class="Page6_m_info">{$m_info}</div>
+
+        </div>
+    </script>
+
+
+    <!--Page7-->
+    <script type="text/template" id="View_HBox7">
+        <div class="swiper-slide box box{$year} _yearBox">
+            <div class="tit"><span>{$year}</span>年</div>
+
+            <div class="DBList{$year} DBList swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                </div>
+                <!-- Add Pagination -->
+            </div>
+
+            <div class="pre" data-id="{$id}"></div>
+            <div class="next" data-id="{$id}"></div>
+
+            <!--<div class="_Page6_Swiper_Titles _Page6_Swiper_Titles{$year}">-->
+            <!--<ul class="sw_tit">-->
+            <!--<li class="act">标题</li>-->
+            <!--<li>标题标题</li>-->
+            <!--</ul>-->
+            <!--</div>-->
+        </div>
+        </div>
+    </script>
+    <script type="text/template" id="View_PageBox7">
+        <div class="swiper-slide _boxs _PageBox7">
+
+            <div class="ImgList{$year}_{$id} ImgList swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                </div>
+                <!-- Add Pagination -->
+            </div>
+            <div class="ImgListPag ImgListPag{$year}_{$id} swiper-pagination-box swiper-pagination-box{$year}_{$id}"></div>
+
+            <div class="Page7_title">{$title}</div>
+            <div class="Page7_m_info">{$m_info}</div>
+
+        </div>
+    </script>
+
 </div>
 
 </body>
@@ -507,6 +649,8 @@
 <script src="js/init3.js"></script>
 <script src="js/init4.js"></script>
 <script src="js/init5.js"></script>
+<script src="js/init6.js"></script>
+<script src="js/init7.js"></script>
 <script src="js/server.js"></script>
 <!--<script src="js/mp3.js"></script>-->
 
@@ -517,6 +661,8 @@
 <script src="js/page3.js"></script>
 <script src="js/page4.js"></script>
 <script src="js/page5.js"></script>
+<script src="js/page6.js"></script>
+<script src="js/page7.js"></script>
 <script src="js/word.js"></script>
 
 <script>

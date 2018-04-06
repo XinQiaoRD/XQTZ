@@ -35,7 +35,7 @@ init.page4 = ()=>{
         let img_ids = Base.page4.year_img_id[y];
         let menu_img_li = "";
         for(let i in img_ids){
-            menu_img_li+= '<div class="swiper-slide"><img src="../../uploads/page4/'+Base.page4.work_img[img_ids[i]].img+'" alt=""></div>';
+            menu_img_li+= '<div class="swiper-slide"><img width="620" height="450" src="../../uploads/page4/'+Base.page4.work_img[img_ids[i]].img+'" alt=""></div>';
         }
         $("#Page4 .ImgList"+y+" .swiper-wrapper").html(menu_img_li);
 

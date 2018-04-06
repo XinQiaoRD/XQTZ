@@ -30,6 +30,8 @@ init.view = ()=>{
     init.page3();
     init.page4();
     init.page5();
+    init.page6();
+    init.page7();
     init.word();
 
     setTimeout(function(){
@@ -38,6 +40,8 @@ init.view = ()=>{
         init.swiper3();
         init.swiper4();
         init.swiper5();
+        init.swiper6();
+        init.swiper7();
 
         zh.ini();
         zh.do();

@@ -26,6 +26,12 @@ Room.Nav.dom = ()=>{
     $$("#Nav .btn5").click(()=>{
         Room.Nav.ppt(5);
     });
+    $$("#Nav .btn6").click(()=>{
+        Room.Nav.ppt(6);
+    });
+    $$("#Nav .btn7").click(()=>{
+        Room.Nav.ppt(7);
+    });
 
 };
 Room.Nav.going = ()=>{
@@ -37,6 +43,8 @@ Room.Nav.going = ()=>{
     $$("#Nav .btn3").velocity({ translateY:[30,0] }, {duration: time, delay:delay*3}).velocity({ translateY:[-1000,0] }, {duration: time});
     $$("#Nav .btn4").velocity({ translateY:[30,0] }, {duration: time, delay:delay*4}).velocity({ translateY:[-1000,0] }, {duration: time});
     $$("#Nav .btn5").velocity({ translateY:[30,0] }, {duration: time, delay:delay*5}).velocity({ translateY:[-1000,0] }, {duration: time});
+    $$("#Nav .btn6").velocity({ translateY:[30,0] }, {duration: time, delay:delay*6}).velocity({ translateY:[-1000,0] }, {duration: time});
+    $$("#Nav .btn7").velocity({ translateY:[30,0] }, {duration: time, delay:delay*7}).velocity({ translateY:[-1000,0] }, {duration: time});
 };
 
 Room.Nav.come_before = (next)=>{
@@ -46,7 +54,9 @@ Room.Nav.come_before = (next)=>{
     $$("#Nav .btn2").velocity({ translateY:1080 }, {duration: 0} );
     $$("#Nav .btn3").velocity({ translateY:1080 }, {duration: 0} );
     $$("#Nav .btn4").velocity({ translateY:1080 }, {duration: 0} );
-    $$("#Nav .btn5").velocity({ translateY:1080 }, {duration: 0, complete:function(){
+    $$("#Nav .btn5").velocity({ translateY:1080 }, {duration: 0} );
+    $$("#Nav .btn6").velocity({ translateY:1080 }, {duration: 0} );
+    $$("#Nav .btn7").velocity({ translateY:1080 }, {duration: 0, complete:function(){
             next();
         }} );
 };
@@ -60,7 +70,9 @@ Room.Nav.coming = ()=>{
     $$("#Nav .btn2").velocity({ translateY:-30 }, {duration: time, delay:delay*5} ).velocity({ translateY:0 }, {duration: time} );
     $$("#Nav .btn3").velocity({ translateY:-30 }, {duration: time, delay:delay*6} ).velocity({ translateY:0 }, {duration: time} );
     $$("#Nav .btn4").velocity({ translateY:-30 }, {duration: time, delay:delay*7} ).velocity({ translateY:0 }, {duration: time} );
-    $$("#Nav .btn5").velocity({ translateY:-30 }, {duration: time, delay:delay*8} ).velocity({ translateY:0 }, {duration: time, complete:()=>{
+    $$("#Nav .btn5").velocity({ translateY:-30 }, {duration: time, delay:delay*8} ).velocity({ translateY:0 }, {duration: time} );
+    $$("#Nav .btn6").velocity({ translateY:-30 }, {duration: time, delay:delay*9} ).velocity({ translateY:0 }, {duration: time} );
+    $$("#Nav .btn7").velocity({ translateY:-30 }, {duration: time, delay:delay*10} ).velocity({ translateY:0 }, {duration: time, complete:()=>{
             Dom._unable.hide();
         }} );
 
@@ -69,14 +81,14 @@ Room.Nav.coming = ()=>{
 Room.Nav.ppt = (id)=>{
     Dom._unable.show();
 
-    $$("#Nav .btn"+id+" img").velocity({ opacity: [1, 0] }, { duration: 500 , complete:()=>{
+    // $$("#Nav .btn"+id+" img").velocity({ opacity: [1, 0] }, { duration: 500 , complete:()=>{
 
         cc.ppt([cc.id, "Page"+id] , (after)=>{
-            cc.m[cc.old].velocity({ opacity: [1, 0] }, { duration: 10, delay:100*7, display:"none"});
+            cc.m[cc.old].velocity({ opacity: [1, 0] }, { duration: 10, delay:100*10, display:"none"});
             cc.m["Page"+id].show();
         });
 
-    }});
+    // }});
 
 
 };
